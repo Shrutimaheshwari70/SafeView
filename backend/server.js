@@ -3,13 +3,12 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import authRoutes from './src/routes/authRoutes.js';
+import parentRoutes from './src/routes/parentRoutes.js';
+import kidRoutes from './src/routes/kidRoutes.js';
+import playlistRoutes from './src/routes/playlistRoutes.js';
+
 import connectDB from './src/config/db.js';
-
-import authRoutes from './routes/authRoutes.js';
-import parentRoutes from './routes/parentRoutes.js';
-import kidRoutes from './routes/kidRoutes.js';
-import playlistRoutes from './routes/playlistRoutes.js';
-
 const app = express();
 app.use(cors());
 app.use(express.json());
